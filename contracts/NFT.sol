@@ -31,7 +31,7 @@ contract NFT is ERC721Enumerable, Ownable {
         require(tokenId < supply, "supply insufficient");
 
         uint256 allowance = IERC20(paymentToken).allowance(msg.sender, address(this));
-        require(allowance >= price,"allowance insufficient");
+        require(allowance >= price, "allowance insufficient");
 
         IERC20(paymentToken).safeTransferFrom(msg.sender, address(this), price);
         _safeMint(_to, tokenId);

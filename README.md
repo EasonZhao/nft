@@ -13,3 +13,5 @@ npx hardhat node
 node scripts/sample-script.js
 npx hardhat help
 ```
+deploy:
+npx hardhat run --network bsc scripts/bsc-mainnet-deploy.js 
